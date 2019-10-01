@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Cifrado_Cesar
 {
-    public partial class Home : Form
+    public partial class formHome : Form
     {
-        public Home()
+        public formHome()
         {
             InitializeComponent();
         }
