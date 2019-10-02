@@ -24,6 +24,9 @@ namespace Cifrado_Cesar
             // Inicializar la lista vacia
             Abecedario = new List<char>();
 
+            toolStripStLblInfo.Text = "";
+            btnCalculate.Enabled = false;
+
             // Establece el primer Abecedario
             cmbBxAbc.SelectedIndex = 0;
             cmbBxOptions.SelectedIndex = 0;
@@ -92,7 +95,8 @@ namespace Cifrado_Cesar
             }
 
             // Muestra la informacion del analisis
-            toolStripStLblInfo.Text = text.Length + " caracteres cifrados";
+            toolStripStLblInfo.Text = text.Length + " caracteres";
+            toolStripStLblInfo.Text += radBtnCipher.Checked ? " cifrados" : " descifrados";
         }
 
         private void BtnShowHide_Click(object sender, EventArgs e)
@@ -109,6 +113,23 @@ namespace Cifrado_Cesar
                 e.Handled = false;
             else
                 e.Handled = true;
+        }
+
+        private void ToolStripStLblAuthor_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Desarrollado por: Óskar Calí\n\nOctubre 2019", "ABOUT", MessageBoxButtons.OK,
+                MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification);
+        }
+
+        private void RichTxtBxSource_TextChanged(object sender, EventArgs e)
+        {
+            if (!richTxtBxSource.Text.Equals(""))
+            {
+                btnCalculate.Enabled = true;
+                return;
+            }
+
+            btnCalculate.Enabled = false;
         }
     }
 }

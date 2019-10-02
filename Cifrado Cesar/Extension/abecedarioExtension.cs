@@ -2,7 +2,7 @@
 
 namespace Cifrado_Cesar
 {
-    internal static class Extension
+    internal static class abecedarioExtension
     {
         /// <summary>
         ///     Funcion para obtener el Abecedario

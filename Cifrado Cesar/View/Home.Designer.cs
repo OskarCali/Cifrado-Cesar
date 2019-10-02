@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formHome));
             this.lblTitle = new System.Windows.Forms.Label();
             this.grpBxCipher = new System.Windows.Forms.GroupBox();
             this.numUDMove = new System.Windows.Forms.NumericUpDown();
@@ -48,6 +49,7 @@
             this.splitContCesar = new System.Windows.Forms.SplitContainer();
             this.richTxtBxSource = new System.Windows.Forms.RichTextBox();
             this.richTxtBxResult = new System.Windows.Forms.RichTextBox();
+            this.toolStripStLblAuthor = new System.Windows.Forms.ToolStripStatusLabel();
             this.grpBxCipher.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUDMove)).BeginInit();
             this.toolStripCont.BottomToolStripPanel.SuspendLayout();
@@ -67,10 +69,11 @@
             // lblTitle
             // 
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitle.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(1123, 60);
+            this.lblTitle.Size = new System.Drawing.Size(1132, 70);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "CIFRADO CESAR";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -88,10 +91,10 @@
             this.grpBxCipher.Controls.Add(this.cmbBxAbc);
             this.grpBxCipher.Controls.Add(this.lblAbc);
             this.grpBxCipher.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpBxCipher.Location = new System.Drawing.Point(0, 60);
+            this.grpBxCipher.Location = new System.Drawing.Point(0, 70);
             this.grpBxCipher.Margin = new System.Windows.Forms.Padding(0);
             this.grpBxCipher.Name = "grpBxCipher";
-            this.grpBxCipher.Size = new System.Drawing.Size(1123, 100);
+            this.grpBxCipher.Size = new System.Drawing.Size(1132, 100);
             this.grpBxCipher.TabIndex = 1;
             this.grpBxCipher.TabStop = false;
             this.grpBxCipher.Text = "Cifrado";
@@ -111,7 +114,7 @@
             0});
             this.numUDMove.Name = "numUDMove";
             this.numUDMove.ReadOnly = true;
-            this.numUDMove.Size = new System.Drawing.Size(120, 22);
+            this.numUDMove.Size = new System.Drawing.Size(89, 22);
             this.numUDMove.TabIndex = 9;
             this.numUDMove.Value = new decimal(new int[] {
             1,
@@ -122,16 +125,18 @@
             // lblMove
             // 
             this.lblMove.AutoSize = true;
-            this.lblMove.Location = new System.Drawing.Point(502, 29);
+            this.lblMove.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMove.Location = new System.Drawing.Point(497, 29);
             this.lblMove.Name = "lblMove";
-            this.lblMove.Size = new System.Drawing.Size(71, 17);
+            this.lblMove.Size = new System.Drawing.Size(74, 19);
             this.lblMove.TabIndex = 8;
             this.lblMove.Text = "Desplazo:";
             // 
             // btnShowHide
             // 
             this.btnShowHide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnShowHide.Location = new System.Drawing.Point(981, 29);
+            this.btnShowHide.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowHide.Location = new System.Drawing.Point(990, 29);
             this.btnShowHide.Name = "btnShowHide";
             this.btnShowHide.Size = new System.Drawing.Size(120, 45);
             this.btnShowHide.TabIndex = 7;
@@ -142,7 +147,8 @@
             // btnCalculate
             // 
             this.btnCalculate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCalculate.Location = new System.Drawing.Point(800, 29);
+            this.btnCalculate.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalculate.Location = new System.Drawing.Point(809, 29);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(130, 45);
             this.btnCalculate.TabIndex = 6;
@@ -153,9 +159,10 @@
             // radBtnDiscipher
             // 
             this.radBtnDiscipher.AutoSize = true;
-            this.radBtnDiscipher.Location = new System.Drawing.Point(348, 63);
+            this.radBtnDiscipher.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radBtnDiscipher.Location = new System.Drawing.Point(348, 62);
             this.radBtnDiscipher.Name = "radBtnDiscipher";
-            this.radBtnDiscipher.Size = new System.Drawing.Size(86, 21);
+            this.radBtnDiscipher.Size = new System.Drawing.Size(103, 27);
             this.radBtnDiscipher.TabIndex = 5;
             this.radBtnDiscipher.TabStop = true;
             this.radBtnDiscipher.Text = "Descifrar";
@@ -164,9 +171,10 @@
             // radBtnCipher
             // 
             this.radBtnCipher.AutoSize = true;
-            this.radBtnCipher.Location = new System.Drawing.Point(348, 27);
+            this.radBtnCipher.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radBtnCipher.Location = new System.Drawing.Point(348, 25);
             this.radBtnCipher.Name = "radBtnCipher";
-            this.radBtnCipher.Size = new System.Drawing.Size(63, 21);
+            this.radBtnCipher.Size = new System.Drawing.Size(74, 27);
             this.radBtnCipher.TabIndex = 4;
             this.radBtnCipher.TabStop = true;
             this.radBtnCipher.Text = "Cifrar";
@@ -189,9 +197,10 @@
             // lblOptions
             // 
             this.lblOptions.AutoSize = true;
+            this.lblOptions.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOptions.Location = new System.Drawing.Point(15, 65);
             this.lblOptions.Name = "lblOptions";
-            this.lblOptions.Size = new System.Drawing.Size(72, 17);
+            this.lblOptions.Size = new System.Drawing.Size(74, 19);
             this.lblOptions.TabIndex = 2;
             this.lblOptions.Text = "Opciones:";
             // 
@@ -211,9 +220,10 @@
             // lblAbc
             // 
             this.lblAbc.AutoSize = true;
+            this.lblAbc.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAbc.Location = new System.Drawing.Point(15, 29);
             this.lblAbc.Name = "lblAbc";
-            this.lblAbc.Size = new System.Drawing.Size(84, 17);
+            this.lblAbc.Size = new System.Drawing.Size(89, 19);
             this.lblAbc.TabIndex = 0;
             this.lblAbc.Text = "Abecedario:";
             // 
@@ -227,11 +237,11 @@
             // toolStripCont.ContentPanel
             // 
             this.toolStripCont.ContentPanel.Controls.Add(this.splitContInfo);
-            this.toolStripCont.ContentPanel.Size = new System.Drawing.Size(1123, 470);
+            this.toolStripCont.ContentPanel.Size = new System.Drawing.Size(1132, 484);
             this.toolStripCont.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolStripCont.Location = new System.Drawing.Point(0, 160);
+            this.toolStripCont.Location = new System.Drawing.Point(0, 170);
             this.toolStripCont.Name = "toolStripCont";
-            this.toolStripCont.Size = new System.Drawing.Size(1123, 521);
+            this.toolStripCont.Size = new System.Drawing.Size(1132, 513);
             this.toolStripCont.TabIndex = 2;
             this.toolStripCont.Text = "toolStripContainer1";
             // 
@@ -240,16 +250,18 @@
             this.stStrip.Dock = System.Windows.Forms.DockStyle.None;
             this.stStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.stStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStLblAuthor,
             this.toolStripStLblInfo});
             this.stStrip.Location = new System.Drawing.Point(0, 0);
             this.stStrip.Name = "stStrip";
-            this.stStrip.Size = new System.Drawing.Size(1123, 26);
+            this.stStrip.Size = new System.Drawing.Size(1132, 29);
             this.stStrip.TabIndex = 0;
             // 
             // toolStripStLblInfo
             // 
+            this.toolStripStLblInfo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStLblInfo.Name = "toolStripStLblInfo";
-            this.toolStripStLblInfo.Size = new System.Drawing.Size(1108, 20);
+            this.toolStripStLblInfo.Size = new System.Drawing.Size(1064, 23);
             this.toolStripStLblInfo.Spring = true;
             this.toolStripStLblInfo.Text = "Total Caracteres";
             this.toolStripStLblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -264,23 +276,23 @@
             // splitContInfo.Panel1
             // 
             this.splitContInfo.Panel1.Controls.Add(this.richTxtBxAbc);
-            this.splitContInfo.Panel1MinSize = 60;
+            this.splitContInfo.Panel1MinSize = 45;
             // 
             // splitContInfo.Panel2
             // 
             this.splitContInfo.Panel2.Controls.Add(this.splitContCesar);
-            this.splitContInfo.Panel2MinSize = 400;
-            this.splitContInfo.Size = new System.Drawing.Size(1123, 470);
-            this.splitContInfo.SplitterDistance = 60;
+            this.splitContInfo.Panel2MinSize = 340;
+            this.splitContInfo.Size = new System.Drawing.Size(1132, 484);
             this.splitContInfo.TabIndex = 0;
             // 
             // richTxtBxAbc
             // 
             this.richTxtBxAbc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTxtBxAbc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTxtBxAbc.Location = new System.Drawing.Point(0, 0);
             this.richTxtBxAbc.Name = "richTxtBxAbc";
             this.richTxtBxAbc.ReadOnly = true;
-            this.richTxtBxAbc.Size = new System.Drawing.Size(1123, 60);
+            this.richTxtBxAbc.Size = new System.Drawing.Size(1132, 50);
             this.richTxtBxAbc.TabIndex = 0;
             this.richTxtBxAbc.Text = "";
             // 
@@ -299,39 +311,54 @@
             // 
             this.splitContCesar.Panel2.Controls.Add(this.richTxtBxResult);
             this.splitContCesar.Panel2MinSize = 400;
-            this.splitContCesar.Size = new System.Drawing.Size(1123, 406);
-            this.splitContCesar.SplitterDistance = 549;
+            this.splitContCesar.Size = new System.Drawing.Size(1132, 430);
+            this.splitContCesar.SplitterDistance = 553;
             this.splitContCesar.TabIndex = 0;
             // 
             // richTxtBxSource
             // 
             this.richTxtBxSource.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTxtBxSource.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTxtBxSource.Location = new System.Drawing.Point(0, 0);
+            this.richTxtBxSource.Multiline = false;
             this.richTxtBxSource.Name = "richTxtBxSource";
-            this.richTxtBxSource.Size = new System.Drawing.Size(549, 406);
+            this.richTxtBxSource.Size = new System.Drawing.Size(553, 430);
             this.richTxtBxSource.TabIndex = 0;
             this.richTxtBxSource.Text = "";
+            this.richTxtBxSource.TextChanged += new System.EventHandler(this.RichTxtBxSource_TextChanged);
             this.richTxtBxSource.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RichTxtBxSource_KeyPress);
             // 
             // richTxtBxResult
             // 
             this.richTxtBxResult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTxtBxResult.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTxtBxResult.Location = new System.Drawing.Point(0, 0);
             this.richTxtBxResult.Name = "richTxtBxResult";
             this.richTxtBxResult.ReadOnly = true;
-            this.richTxtBxResult.Size = new System.Drawing.Size(570, 406);
+            this.richTxtBxResult.Size = new System.Drawing.Size(575, 430);
             this.richTxtBxResult.TabIndex = 0;
             this.richTxtBxResult.Text = "";
+            // 
+            // toolStripStLblAuthor
+            // 
+            this.toolStripStLblAuthor.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripStLblAuthor.Name = "toolStripStLblAuthor";
+            this.toolStripStLblAuthor.Size = new System.Drawing.Size(53, 23);
+            this.toolStripStLblAuthor.Text = "Autor";
+            this.toolStripStLblAuthor.Click += new System.EventHandler(this.ToolStripStLblAuthor_Click);
             // 
             // formHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1123, 681);
+            this.ClientSize = new System.Drawing.Size(1132, 683);
             this.Controls.Add(this.toolStripCont);
             this.Controls.Add(this.grpBxCipher);
             this.Controls.Add(this.lblTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1150, 730);
             this.Name = "formHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.Load += new System.EventHandler(this.FormHome_Load);
             this.grpBxCipher.ResumeLayout(false);
@@ -378,6 +405,7 @@
         private System.Windows.Forms.NumericUpDown numUDMove;
         private System.Windows.Forms.Label lblMove;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStLblInfo;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStLblAuthor;
     }
 }
 
