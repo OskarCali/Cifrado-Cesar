@@ -100,7 +100,12 @@
             // 
             this.numUDMove.Location = new System.Drawing.Point(579, 27);
             this.numUDMove.Maximum = new decimal(new int[] {
+            1,
             0,
+            0,
+            0});
+            this.numUDMove.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
@@ -108,6 +113,11 @@
             this.numUDMove.ReadOnly = true;
             this.numUDMove.Size = new System.Drawing.Size(120, 22);
             this.numUDMove.TabIndex = 9;
+            this.numUDMove.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lblMove
             // 
@@ -127,6 +137,7 @@
             this.btnShowHide.TabIndex = 7;
             this.btnShowHide.Text = "OCULTAR";
             this.btnShowHide.UseVisualStyleBackColor = true;
+            this.btnShowHide.Click += new System.EventHandler(this.BtnShowHide_Click);
             // 
             // btnCalculate
             // 
@@ -137,6 +148,7 @@
             this.btnCalculate.TabIndex = 6;
             this.btnCalculate.Text = "CALCULAR";
             this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.BtnCalculate_Click);
             // 
             // radBtnDiscipher
             // 
@@ -215,7 +227,7 @@
             // toolStripCont.ContentPanel
             // 
             this.toolStripCont.ContentPanel.Controls.Add(this.splitContInfo);
-            this.toolStripCont.ContentPanel.Size = new System.Drawing.Size(1123, 495);
+            this.toolStripCont.ContentPanel.Size = new System.Drawing.Size(1123, 470);
             this.toolStripCont.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripCont.Location = new System.Drawing.Point(0, 160);
             this.toolStripCont.Name = "toolStripCont";
@@ -258,8 +270,8 @@
             // 
             this.splitContInfo.Panel2.Controls.Add(this.splitContCesar);
             this.splitContInfo.Panel2MinSize = 400;
-            this.splitContInfo.Size = new System.Drawing.Size(1123, 495);
-            this.splitContInfo.SplitterDistance = 62;
+            this.splitContInfo.Size = new System.Drawing.Size(1123, 470);
+            this.splitContInfo.SplitterDistance = 60;
             this.splitContInfo.TabIndex = 0;
             // 
             // richTxtBxAbc
@@ -268,7 +280,7 @@
             this.richTxtBxAbc.Location = new System.Drawing.Point(0, 0);
             this.richTxtBxAbc.Name = "richTxtBxAbc";
             this.richTxtBxAbc.ReadOnly = true;
-            this.richTxtBxAbc.Size = new System.Drawing.Size(1123, 62);
+            this.richTxtBxAbc.Size = new System.Drawing.Size(1123, 60);
             this.richTxtBxAbc.TabIndex = 0;
             this.richTxtBxAbc.Text = "";
             // 
@@ -281,12 +293,14 @@
             // splitContCesar.Panel1
             // 
             this.splitContCesar.Panel1.Controls.Add(this.richTxtBxSource);
+            this.splitContCesar.Panel1MinSize = 400;
             // 
             // splitContCesar.Panel2
             // 
             this.splitContCesar.Panel2.Controls.Add(this.richTxtBxResult);
-            this.splitContCesar.Size = new System.Drawing.Size(1123, 429);
-            this.splitContCesar.SplitterDistance = 541;
+            this.splitContCesar.Panel2MinSize = 400;
+            this.splitContCesar.Size = new System.Drawing.Size(1123, 406);
+            this.splitContCesar.SplitterDistance = 549;
             this.splitContCesar.TabIndex = 0;
             // 
             // richTxtBxSource
@@ -294,9 +308,10 @@
             this.richTxtBxSource.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTxtBxSource.Location = new System.Drawing.Point(0, 0);
             this.richTxtBxSource.Name = "richTxtBxSource";
-            this.richTxtBxSource.Size = new System.Drawing.Size(541, 429);
+            this.richTxtBxSource.Size = new System.Drawing.Size(549, 406);
             this.richTxtBxSource.TabIndex = 0;
             this.richTxtBxSource.Text = "";
+            this.richTxtBxSource.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RichTxtBxSource_KeyPress);
             // 
             // richTxtBxResult
             // 
@@ -304,7 +319,7 @@
             this.richTxtBxResult.Location = new System.Drawing.Point(0, 0);
             this.richTxtBxResult.Name = "richTxtBxResult";
             this.richTxtBxResult.ReadOnly = true;
-            this.richTxtBxResult.Size = new System.Drawing.Size(578, 429);
+            this.richTxtBxResult.Size = new System.Drawing.Size(570, 406);
             this.richTxtBxResult.TabIndex = 0;
             this.richTxtBxResult.Text = "";
             // 
